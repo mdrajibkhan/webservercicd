@@ -4,6 +4,7 @@ pipeline {
     stage('Hello') {
       steps {
         echo 'Hello World'
+        git(url: 'https://github.com/mdrajibkhan/webservercicd.git', branch: 'main', poll: true)
       }
     }
 
